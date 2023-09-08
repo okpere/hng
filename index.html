@@ -3,31 +3,77 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: black;
+        color: aliceblue;
+      }
+      img {
+        width: 250px;
+        border-radius: 45%;
+      }
+      a{
+        color: white;
+        text-decoration: none;
+      }
+    </style>
     <title>Document</title>
   </head>
   <body>
     <div class="container">
       <h1 data-testid="okpere">Okpere Clinton</h1>
-      <img src="" alt="okpere" data-testid="slackDisplayImage" />
-      <p data-testid="Frontend">Track:Frontend</p>
+      <img
+        src="https://ca.slack-edge.com/T05FFAA91JP-U05S0SR59TJ-662fb4d53f68-512"
+        alt="okpere"
+        data-testid="slackDisplayImage"
+      />
+      <p data-testid="Frontend">Track : Frontend</p>
       <a href="" data-testid="“githubURL”"></a>
-      <span data-testid="currentUTCTime"></span>
-      <span data-testid="currentDayOfTheWeek"></span>
+      <p data-testid="currentUTCTime"></p>
+      <p data-testid="currentDayOfTheWeek"></p>
+      <a
+        href="https://github.com/okpere/hng-stage-1"
+        data-testid="“githubURL”"
+      >Github</a>
     </div>
+    <script>
+      const currentUTCTime = document.querySelector(
+        '[data-testid="currentUTCTime"]'
+      );
+      const currentDayOfTheWeek = document.querySelector(
+        '[data-testid="currentDayOfTheWeek"]'
+      );
+
+      // current date
+      const currentDate = new Date();
+
+      // array of day by names
+      const daysOfWeek = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+
+      //current day of the week
+      const currentDayIndex = currentDate.getDay();
+
+      //name of the current day
+      const currentDayName = daysOfWeek[currentDayIndex];
+
+      currentDayOfTheWeek.innerHTML = "Today is : " + currentDayName;
+
+      // current UTC time in milliseconds
+      const currentUTCTimeMillis = Date.now();
+
+      currentUTCTime.innerHTML = 'Time in Milliseconds : ' + currentUTCTimeMillis;
+    </script>
   </body>
-  <script>
-    const currentDay = new Date();
-    const daysOfWeek = [
-      "Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-    ];
-    const currentDayIndex = currentDate.getDay();
-    const currentDayName = daysOfWeek[currentDayIndex];
-    console.log("work");
-  </script>
 </html>
