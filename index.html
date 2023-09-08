@@ -16,7 +16,7 @@
         width: 250px;
         border-radius: 45%;
       }
-      a{
+      a {
         color: white;
         text-decoration: none;
       }
@@ -29,16 +29,14 @@
       <img
         src="https://ca.slack-edge.com/T05FFAA91JP-U05S0SR59TJ-662fb4d53f68-512"
         alt="okpere"
-        data-testid="slackDisplayImage"
+        data-testid="https://ca.slack-edge.com/T05FFAA91JP-U05S0SR59TJ-662fb4d53f68-512"
       />
-      <p data-testid="Frontend">Track : Frontend</p>
-      <a href="" data-testid="“githubURL”"></a>
-      <p data-testid="currentUTCTime"></p>
       <p data-testid="currentDayOfTheWeek"></p>
-      <a
-        href="https://github.com/okpere/hng-stage-1"
-        data-testid="“githubURL”"
-      >Github</a>
+      <p data-testid="currentUTCTime"></p>
+      <p data-testid="Frontend">Track : Frontend</p>
+      <a href="https://github.com/okpere/hng-stage-1" data-testid="“githubURL”"
+        >Github</a
+      >
     </div>
     <script>
       const currentUTCTime = document.querySelector(
@@ -73,7 +71,8 @@
       // current UTC time in milliseconds
       const currentUTCTimeMillis = Date.now();
 
-      currentUTCTime.innerHTML = 'Time in Milliseconds : ' + currentUTCTimeMillis;
+      currentUTCTime.innerHTML =
+        "Time in Milliseconds : " + currentUTCTimeMillis;
     </script>
   </body>
 </html>
