@@ -23,9 +23,9 @@ const currentDayIndex = currentDate.getDay();
 //name of the current day
 const currentDayName = daysOfWeek[currentDayIndex];
 
-currentDayOfTheWeek.innerHTML = "Today is : " + currentDayName;
+currentDayOfTheWeek.innerHTML = currentDayName;
 
 // current UTC time in milliseconds
 const currentUTCTimeMillis = Date.now();
 
-currentUTCTime.innerHTML = "Time in Milliseconds : " + currentUTCTimeMillis;
+currentUTCTime.innerHTML = currentUTCTimeMillis;
