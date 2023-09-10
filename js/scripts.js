@@ -25,7 +25,15 @@ const currentDayName = daysOfWeek[currentDayIndex];
 
 currentDayOfTheWeek.innerHTML = currentDayName;
 
+function formatTwoDigits(number) {
+  return (number < 10 ? "0" : "") + number;
+}
 // current UTC time in milliseconds
 const currentUTCTimeMillis = Date.now();
+const hours = formatTwoDigits(currentDate.getUTCHours());
+const minutes = formatTwoDigits(currentDate.getUTCMinutes());
+const seconds = formatTwoDigits(currentDate.getUTCSeconds());
+// Create a string with the formatted time
+const currentTimeString = `${hours}:${minutes}:${seconds}`;
 
-currentUTCTime.innerHTML = currentUTCTimeMillis;
+currentUTCTime.innerHTML = currentTimeString;
